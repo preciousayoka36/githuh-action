@@ -19,5 +19,12 @@ jobs:
           run: |
             import platform
             print(platform.processor())
-          shell: python 
+          shell: python
+   run-windows-commands:
+     run-on: windows-latest
+     steps:
+       - name: directory
+         run: pwd
+         shell: bash  
+
 
