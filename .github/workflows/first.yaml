@@ -3,6 +3,9 @@ name: shell commands
 on: 
   - push
   
+env:
+  AWS_ACCESS_KEY: ${{ secrets.ACCESS_KEY}}
+  AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
 
 jobs:
    terraform-job:
@@ -18,6 +21,13 @@ jobs:
           run: terraform init
         - name: terraform validate
           run: terraform validate
+        - name: terraform plan
+          run: terraform plan
+        - name: terraform apply
+          run: terraform apply -auto-approve
+        #- name: terraform destroy
+         # run: terraform destroy -auto-approve
+
           
             
        
