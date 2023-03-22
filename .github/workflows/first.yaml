@@ -23,7 +23,7 @@ jobs:
    run-windows-commands:
      runs-on: windows-latest
      steps:
-       - name: directory
+       - name: Directory
          run: pwd
          shell: bash  
 
