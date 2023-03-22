@@ -3,6 +3,9 @@ name: shell commands
 on: 
   - push
   
+env:
+  AWS_ACCESS_KEY: ${{ secret.AWS_ACCESS_KEY}}
+  AWS_SECRET_ACCESS_KEY: ${{secret.AWS_SECRET_ACCESS_KEY}}
 
 jobs:
    terraform-job:
