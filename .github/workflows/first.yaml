@@ -5,15 +5,20 @@ on:
   
 
 jobs:
-   run-shell-commands:
+   terraform-job:
      runs-on: ubuntu-latest
      steps:
         - name: checkout
           uses: action/checkout@v1
-        - name: multi line string
-          run: |
-             pwd
-             node -v
-             ls -a
+        - name: set terraform
+          uses: hashicorp/setup-terraform@v2
+          with:
+             terraform_version: 1.1.9
+        - name: terraform initialisation
+          run: terraform init
+        - name: terraform validate
+          run: terraform validate
+          
+            
        
 
