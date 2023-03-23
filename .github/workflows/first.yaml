@@ -1,4 +1,4 @@
-name: shell commands
+name: infrasructure provisioning 
 
 on: 
   - push
