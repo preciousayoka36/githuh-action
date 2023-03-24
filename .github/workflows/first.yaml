@@ -30,8 +30,6 @@ jobs:
           run: terraform validate
         - name: terraform plan
           run: terraform plan
-        - name: Grant execute permissions to semantic-release
-          run: "chmod +x $(npm bin)/semantic-release"
         - name: release
           run: npx semantic-release
           env:
