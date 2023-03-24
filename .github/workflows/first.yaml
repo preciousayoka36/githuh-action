@@ -15,9 +15,6 @@ jobs:
        pull-requests: write
      runs-on: ubuntu-latest
      steps:
-        - name: Add semantic-release to PATH
-          run: export PATH=$(npm bin):$PATH
-
         - name: checkout
           uses: actions/checkout@v1
         - name: set terraform
